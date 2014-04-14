@@ -1,13 +1,21 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package atmmachine;
 
+import java.util.Scanner;
 /**
  *
  * @author Kyle
  */
 public class Keypad {
+    
+    private Scanner input;
+    
+    public Keypad(){
+        input = new Scanner(System.in);
+    }
+    
+    public int getInput(){
+        return input.nextInt();
+    }
     
 }
