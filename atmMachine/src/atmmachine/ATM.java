@@ -42,7 +42,7 @@ public class ATM {
                 authenticateUser();
             }
             
-            performTransactions();
+            performTransaction();
             userAuthenticated = false;
             currentAccountNumber = 0;
             screen.displayMessageLine("\nThank You, Goodbye");
@@ -117,7 +117,7 @@ public class ATM {
                 temp = new BalanceInquiry(currentAccountNumber, screen, bankDatabase);
                 break;
             case WITHDRAWAL:
-                temp = new Withdrawal(currentAccountNumber, screen, bankDatabse, keypad, cashDispenser);
+                temp = new Withdrawal(currentAccountNumber, screen, bankDatabase, keypad, cashDispenser);
                 break;
             case DEPOSIT:
                 temp = new Deposit(currentAccountNumber, screen, bankDatabase, keypad, depositSlot);
